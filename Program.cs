@@ -30,7 +30,7 @@ static void PatchDLL(string dllPath)
 
         ModuleWriterOptions opts = new ModuleWriterOptions(module);
         opts.PEHeadersOptions.Machine = dnlib.PE.Machine.AMD64;
-        opts.Cor20HeaderOptions.Flags = 0;
+        opts.Cor20HeaderOptions.Flags &= ~ComImageFlags.ILOnly;
 
         if ((opts.PEHeadersOptions.Characteristics & dnlib.PE.Characteristics.Dll) == 0)
         {
