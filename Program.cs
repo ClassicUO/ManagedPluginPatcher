@@ -1,6 +1,6 @@
 ﻿using dnlib.DotNet;
 using dnlib.DotNet.Writer;
-
+using dnlib.DotNet.MD;
 
 foreach (var s in args)
 {
